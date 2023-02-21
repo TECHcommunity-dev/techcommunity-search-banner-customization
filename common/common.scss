@@ -50,7 +50,6 @@ html.home-search-banner, body[class*=" category-"].category:not(.archetype-regul
                         display: inline-block !important;
                     }
                     a.show-advanced-search:after {
-                        content: ' Advanced options';
                         color: #757575;
                     }
                     @include breakpoint("mobile-large") {

@@ -23,51 +23,50 @@ html.home-search-banner, body[class*=" category-"].category:not(.archetype-regul
         & > div {
             max-width: 100%;    
         }
-        .search-widget {
-             .search-icon {
-                padding: 10px 10px !important;
-                left: 0;
-                right: unset;
-                svg.d-icon-search {
-                    height: 1.8em;
-                }
-            }
-            .search-input {
-                background-color: var(--secondary);
-                input#search-term {
-                    width: auto; /* Binjan; 2023.11.23; correct the search box width to solve "Advance Search" no text wrap */
-                    min-height: 46px;
-                    margin-left: 30px !important;
-                    padding-left: 5px;
-                    font-size: 1.08rem;
-                    @include breakpoint("mobile-large") {                    
-                         padding-right: 50px !important;
-                    }
-                }
-                .searching {
-                    top: 0.78em !important;
-                    right: 0.5em !important;
-                    a.show-advanced-search {
-                        display: inline-block !important;
-                    }
-                    a.show-advanced-search:after {
-                        color: #757575;
-                        font-size: 1.1rem;
-                        margin-left: 0.3em;
-                    }
-                    @include breakpoint("mobile-large") {
-                        a.show-advanced-search:after {
-                            content: '';
-                        }
-                    }
-                }
-            }
-            .results {
-                width: 100% !important;
-                max-width: 100% !important;
-                top: 3.28em;
-                z-index: 55 !important; // Increase the z-index of search bar drop-down to fix the overlapping issue on KB and Feedback pages. [Aaded by Saurabh; Date: 04-03-2022]
+        .search-icon {
+            padding: 10px 10px !important;
+            left: 0;
+            right: unset;
+            svg.d-icon-search {
+                height: 1.8em;
             }
         }
+        .search-input {
+            background-color: var(--secondary);
+            input#search-term {
+                width: auto; /* Binjan; 2023.11.23; correct the search box width to solve "Advance Search" no text wrap */
+                min-height: 46px;
+                /*margin-left: 30px !important; */ /* Binjan; 2023.12.04; remove margin, as search icon div changes*/
+                padding-left: 5px;
+                font-size: 1.08rem;
+                @include breakpoint("mobile-large") {                    
+                        padding-right: 50px !important;
+                }
+            }
+            .searching {
+                top: 0.78em !important;
+                right: 0.5em !important;
+                a.show-advanced-search {
+                    display: inline-block !important;
+                }
+                a.show-advanced-search:after {
+                    color: #757575;
+                    font-size: 1.1rem;
+                    margin-left: 0.3em;
+                }
+                @include breakpoint("mobile-large") {
+                    a.show-advanced-search:after {
+                        content: '';
+                    }
+                }
+            }
+        }
+        .results {
+            width: 100% !important;
+            max-width: 100% !important;
+            top: 3.28em;
+            z-index: 55 !important; // Increase the z-index of search bar drop-down to fix the overlapping issue on KB and Feedback pages. [Aaded by Saurabh; Date: 04-03-2022]
+        }
+        
     }
 }
